@@ -1,8 +1,8 @@
 #include <iostream>
 
-#include "addition.hpp"
-#include "division.hpp"
-#include "printResult.hpp"
+#include "my_math/addition.hpp"
+#include "my_math/division.hpp"
+#include "my_print/printResult.hpp"
 
 int main()
 {
