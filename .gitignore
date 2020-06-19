@@ -2,3 +2,6 @@
 calculator
 *.o
 
+build/
+compile_commands.json
+
