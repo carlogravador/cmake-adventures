@@ -1,5 +1,11 @@
 # CMake Adventures
 
+## Requirements
+
+* gcc/g++ compiler
+* CMake Version 3.0+
+* GNU Make.
+
 ## Compile and run
 
 ```bash
