@@ -4,8 +4,12 @@ project(GTK_PC)
 
 add_executable(${PROJECT_NAME}_app main.cpp)
 
-find_package(PkgConfig REQUIRED)
-pkg_check_modules(GTK3 REQUIRED gtk+-3.0)
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake/modules)
+find_package(GTK3 REQUIRED)
+
+if(NOT GTK3_FOUND)
+	messsage(FATL_ERROR "GTK3 not found")
+endif()
 
 target_include_directories(${PROJECT_NAME}_app PRIVATE ${GTK3_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME}_app PRIVATE ${GTK3_LIBRARIES})
